@@ -7,9 +7,6 @@ h3 {
   flex-direction: row;
   justify-content: space-around;
 }
-.button {
+.list {
   margin: 75px;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
 }
