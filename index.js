@@ -23,9 +23,9 @@ async function getProfile() {
     name.innerHTML = `${results.name}'s Profile`;
     image.setAttribute("src", results.avatar_url);
     userName.innerHTML = `User ID: ${results.login}`;
-
-    // repo-following-followers
-    repo.setAttribute("value", "Repository");
+    repo.innerHTML = `Repository: ${results.repos_url}`;
+    following.innerHTML = `Following: ${results.following}`;
+    followers.innerHTML = `Followers: ${results.followers}`;
 
     // results.forEach((result) => {
     //   const li = document.createElement("li");
