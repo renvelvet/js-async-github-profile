@@ -23,18 +23,9 @@ async function getProfile() {
     name.innerHTML = `${results.name}'s Profile`;
     image.setAttribute("src", results.avatar_url);
     userName.innerHTML = `User ID: ${results.login}`;
-    repo.innerHTML = `Repository: ${results.repos_url}`;
-    following.innerHTML = `Following: ${results.following}`;
-    followers.innerHTML = `Followers: ${results.followers}`;
-
-    // results.forEach((result) => {
-    //   const li = document.createElement("li");
-    //   const text = document.createTextNode(result.name);
-
-    //   li.appendChild(text);
-    //   ul.appendChild(li);
-    // });
-    // h3.innerHTML = `Jumlah data: ${results.length}`;
+    repo.innerHTML = `<span>Repository:</span> ${results.public_repos}`;
+    following.innerHTML = `<span>Following:</span> ${results.following}`;
+    followers.innerHTML = `<span>Followers:</span> ${results.followers}`;
   } catch (error) {
     console.log(error);
   }
